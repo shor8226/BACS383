@@ -28,9 +28,9 @@ body{
 
 .buttons button{
 	width:100%;
-	border:2px solid #6666ff ;
+	border:2px solid black ;
 	border-radius: 10px;
-	background-color: #00CC00;
+	background-color: #6666ff;
 }
 
 .buttons button:hover{
@@ -81,8 +81,8 @@ body{
 }
 
 #lgnBtn{
-	border:2px solid #6666ff;
-	background-color:#00CC00;
+	border:2px solid black;
+	background-color:#6666ff;
 }
 
 input{
