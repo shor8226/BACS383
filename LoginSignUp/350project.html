@@ -8,6 +8,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Stoke' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="assets/animate.css">
+
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -19,7 +21,7 @@
         <div class="centered">
 
       <div id="title">
-        <h1 style="font-family: stoke; font-weight: bold; color:#6666ff;">Shopper.</h1>
+        <h1 class="tlt" data-in-effect="tada" style="font-family: stoke; font-weight: bold; color:#6666ff;">Shopper.</h1>
       </div>
 
 
@@ -46,7 +48,7 @@
             <input type="text" placeholder="Enter Username" name="uname" required><br> <br>
             <input type="password" placeholder="Enter Password" name="psw" required><br> <br>
 
-            <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Login</b></button> <br> <br>
+            <button style="width: 50%;"type="submit" class="btn" id="lgnBtn"><b style="color: white;">Login</b></button> <br> <br>
           </div>
         </form>    
       </div>
@@ -63,14 +65,14 @@
             <h2 style="font-family: 'stoke';">Sign up.</h2> <p>Gain access to our extensive product library</p>
           </div>
 
-          <div style="margin-top: 2em; margin-bottom: 2em;" class="container">
+          <div style="margin-top: 2em; margin-bottom: 2em;" class="frmcontainer">
             <input type="text" placeholder="First Name" name="fName" required>
             <input type="text" placeholder="Last Name" name="lName" required><br> <br>
             <input type="text" placeholder="Username" name="uname" required>
             <input type="password" placeholder="Password" name="psw" required><br> <br>
             <input style="width:49%;" type="email" placeholder="Email Address" name="email" required><br> <br>
 
-            <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Create Account</b></button> <br> <br>
+            <button style="width: 50%;"type="submit" class="btn" id="lgnBtn"><b style="color: white;">Create Account</b></button> <br> <br>
           </div>
         </form>    
       </div>
@@ -83,5 +85,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="assets/jquery.textillate.js"></script>
+    <script src="assets/jquery.fittext.js"></script>
+    <script src="assets/jquery.lettering.js"></script>
+    <script type="text/javascript">
+      $(function () {
+          $('.tlt').textillate();
+      })
+    </script>
   </body>
 </html>
