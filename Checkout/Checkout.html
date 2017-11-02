@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--google font family stoke-->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Stoke' rel='stylesheet'> 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -12,122 +13,128 @@
   </head>
   <body>
     <div id="siteHead">
-      <h2>Shopper.</h2>
+      <h2>Shopperoni.</h2>
     </div>
+
     <div class="container">
       <div class="row">
-        <div class="col-med-7">
+        <div class="col-med-8">
         <fieldset class="outer-left-fieldset">
-        <legend>Checkout</legend>
+          <legend>Enter Payment Information</legend>
           <form>
               <fieldset class="inner-fieldset">
-              <legend>Enter shipping address information</legend>
+              <legend>Shipping Address</legend>
                 <div class="row">
                   <div class="col-md-12">
                     <label>Street Address:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <label>City:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                   <div class="col-md-4">
                     <label>State:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                   <div class="col-md-4">
                     <label>ZIP Code:
-                        <input type="text">
+                        <input type="text" required>
                     </label>
                   </div>
                 </div>
               </fieldset>
 
               <fieldset class="inner-fieldset">
-                <legend>Enter billing address information</legend>
+              <legend>Billing Address</legend>
                 <div class="row">
                   <div class="col-md-12">
                     <label>Street Address:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <label>City:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                   <div class="col-md-4">
                     <label>State:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                   <div class="col-md-4">
                     <label>ZIP Code:
-                        <input type="text">
+                        <input type="text" required>
                     </label>
                   </div>
                 </div>
               </fieldset>
 
               <fieldset class="inner-fieldset">
-                <legend>Enter payment information information</legend>
+              <legend>Card Details</legend>
                 <div class="row">
                   <div class="col-md-12">
                     <label>Card Number:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
                     <label>Card Verification Value:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                   <div class="col-md-6">
                     <label>Expiration Date:
-                      <input type="text">
+                      <input type="text" required>
                     </label>
                   </div>
                 </div>
               </fieldset>
+              
+              <button type="submit">Confirm</button>
+
             </form>
         </fieldset>
         </div>
-        <div class="col-med-5">
+
+        <div class="col-med-4">
           <fieldset class="outer-right-fieldset">
             <legend>Summary</legend>
-            <div class="row">
-              <label>
-                <div class="col-med-6">Item Cost:</div>
-                <div class ="col-med-6">cost</div>
-              </label>
-            </div>
-            <div class="row">
+              <div class="row">
                 <label>
-                  <div class="col-med-6">Shipping Cost:</div>
-                  <div class ="col-med-6">cost</div>
+                  <div class="col-med-6">Item Cost:</div>
+                  <div class ="col-med-6"><div id="items" class="cost"></div></div>
                 </label>
               </div>
               <div class="row">
-                  <label>
-                    <div class="col-med-6">Taxes:</div>
-                    <div class ="col-med-6">cost</div>
-                  </label>
-                </div>
-                <div class="row">
-                    <label>
-                      <div class="col-med-6">Total:</div>
-                      <div class ="col-med-6">cost</div>
-                    </label>
-                  </div>
+                <label>
+                  <div class="col-med-6">Shipping Cost:</div>
+                  <div class ="col-med-6"><div id="shipping" class="cost"></div></div>
+                </label>
+              </div>
+              <div class="row">
+                <label>
+                  <div class="col-med-6">Taxes:</div>
+                  <div class ="col-med-6"><div id="taxes" class="cost"></div></div>
+                </label>
+              </div>
+              <div class="row">
+                <label>
+                  <div class="col-med-6">Total:</div>
+                  <div class ="col-med-6"><div id="total" class="cost"></div></div>
+                </label>
+              </div>
+              <button type="button">Modify Order</button>
           </fieldset>
         </div>
       </div>

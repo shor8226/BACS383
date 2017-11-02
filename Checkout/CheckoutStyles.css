@@ -1,29 +1,43 @@
 fieldset {
     min-width: 0;
-    padding: 2em;
+    padding: 1em;
     box-sizing: border-box;
     border-width: 1px;
     border-style: solid;
-    border-color: #ccc;
+    border-color: white;
+    font-family: "josefin sans";
+    margin-top: 2em;
+    background-color: #eaeaea;
 }
 
 legend {
     display: inline-block;
     width: auto;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #eaeaea;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .outer-left-fieldset {
     border-width: 2px;
-    margin-right: 2em;
+    margin-right: 1rem;
 }
 
 .outer-right-fieldset {
-    border-width: 2px;
+    border-width: 1px;
 }
 
 .inner-fieldset {
-    background-color: #fff;
-    margin-top: 1em;
+    background-color: white;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.inner-fieldset legend {
+    font-size: 1.2rem;
 }
 
 input[type="text"] {
@@ -34,18 +48,22 @@ input[type="text"] {
     font-size: 18px;
 }
 
-#siteHead{
+#siteHead {
 	background-color:#6666ff; 
 	border-bottom: 2px solid black;
 }
 
-#siteHead h2{
+#siteHead h2 {
 	margin-left: 1em;
 	color:white;
 	font-weight: bold;
 	margin-bottom: .5em;
     padding-top: .5em;
     font-family: stoke
+}
+
+.cost {
+    
 }
 
 label {
@@ -55,4 +73,22 @@ label {
 .row {
     margin-right: 0;
     margin-left: 0;
+}
+
+button{
+	border-radius:8px;
+    width: auto;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color:#6666ff;
+    float: right; 
+}
+
+button:hover{
+	cursor:pointer;
+}
+
+body {
+    background-color: white;
 }
