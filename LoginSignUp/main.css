@@ -1,13 +1,40 @@
-#siteHead{
-	background-color:#6666ff; 
-	border-bottom: 2px solid black;
+html{
+	background-color: #D3D3D3;
+	height:100%;
 }
-#siteHead h2{
-	margin-left: 1em;
-	color:white;
-	font-weight: bold;
-	margin-bottom: .5em;
-	padding-top: .5em;
+body{
+	height: 100%;
+}
+
+.bodyContainer{
+	background-color:#D3D3D3;
+	height:100%;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.centered{
+	text-align: center;
+}
+
+#title h1{
+	font-size: 500%;
+}
+
+.buttons{
+	align-self:center;
+}
+
+.buttons button{
+	width:100%;
+	border:2px solid #6666ff ;
+	border-radius: 10px;
+	background-color: #00CC00;
+}
+
+.buttons button:hover{
+	cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -54,7 +81,8 @@
 }
 
 #lgnBtn{
-	background-color:#6666ff;
+	border:2px solid #6666ff;
+	background-color:#00CC00;
 }
 
 input{
@@ -63,6 +91,7 @@ input{
 }
 
 .signUpHead{
+	text-align: left;
 	background-color: #6666ff;
 	border-bottom: 2px solid black;
 	margin-bottom: 2em;

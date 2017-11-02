@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href='https://fonts.googleapis.com/css?family=Stoke' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="main.css">
 
     
@@ -14,60 +15,69 @@
 
   <body>
 
-    <div id="siteHead">
-      <h2>Shopper.</h2>
+      <div class="bodyContainer">
+        <div class="centered">
+
+      <div id="title">
+        <h1 style="font-family: stoke; font-weight: bold; color:#6666ff;">Shopper.</h1>
+      </div>
+
+
+      <div class="buttons">
+         <button style="margin-top: 2em;" onclick="document.getElementById('loginMod').style.display='block'"><b style="color:white;">Login</b></button><br> <br>
+         <button onclick="document.getElementById('signupMod').style.display='block'"><b style="color:white;">Create Account</b></button>
+      </div>
+     <!-- Button to open the modal login form -->
+     
+      <!-- The Modal -->
+      <div id="loginMod" class="modal">
+
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+
+          <span onclick="document.getElementById('loginMod').style.display='none'" 
+          class="close" title="Close Modal">&times;</span>
+
+          <div class="signUpHead">
+            <h2 style="font-family: 'stoke';">Log In.</h2> <p>Continue shopping where you left off</p>
+          </div>
+
+          <div class="container">
+            <input type="text" placeholder="Enter Username" name="uname" required><br> <br>
+            <input type="password" placeholder="Enter Password" name="psw" required><br> <br>
+
+            <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Login</b></button> <br> <br>
+          </div>
+        </form>    
+      </div>
+
+      <div id="signupMod" class="modal">
+
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+
+          <span onclick="document.getElementById('signupMod').style.display='none'" 
+          class="close" title="Close Modal">&times;</span>
+
+          <div class="signUpHead">
+            <h2 style="font-family: 'stoke';">Sign up.</h2> <p>Gain access to our extensive product library</p>
+          </div>
+
+          <div style="margin-top: 2em; margin-bottom: 2em;" class="container">
+            <input type="text" placeholder="First Name" name="fName" required>
+            <input type="text" placeholder="Last Name" name="lName" required><br> <br>
+            <input type="text" placeholder="Username" name="uname" required>
+            <input type="password" placeholder="Password" name="psw" required><br> <br>
+            <input style="width:49%;" type="email" placeholder="Email Address" name="email" required><br> <br>
+
+            <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Create Account</b></button> <br> <br>
+          </div>
+        </form>    
+      </div>
+    </div>
     </div>
 
-   <!-- Button to open the modal login form -->
-    <button onclick="document.getElementById('loginMod').style.display='block'">Login</button>
-
-    <!-- The Modal -->
-    <div id="loginMod" class="modal">
-
-      <!-- Modal Content -->
-      <form class="modal-content animate" action="/action_page.php">
-
-        <span onclick="document.getElementById('loginMod').style.display='none'" 
-        class="close" title="Close Modal">&times;</span>
-
-        <div class="imgcontainer">
-          <img src="images/login.png" alt="Login Image" class="loginImg">
-        </div>
-
-        <div class="container">
-          <input type="text" placeholder="Enter Username" name="uname" required><br> <br>
-          <input type="password" placeholder="Enter Password" name="psw" required><br> <br>
-
-          <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Login</b></button> <br> <br>
-        </div>
-      </form>    
-    </div>
-
-     <button onclick="document.getElementById('signupMod').style.display='block'">Create Account</button>
-
-    <div id="signupMod" class="modal">
-
-      <!-- Modal Content -->
-      <form class="modal-content animate" action="/action_page.php">
-
-        <span onclick="document.getElementById('signupMod').style.display='none'" 
-        class="close" title="Close Modal">&times;</span>
-
-        <div class="signUpHead">
-          <h2>Sign up.</h2> <p>Gain access to our extensive product library</p>
-        </div>
-
-        <div style="margin-top: 2em; margin-bottom: 2em;" class="container">
-          <input type="text" placeholder="First Name" name="fName" required>
-          <input type="text" placeholder="Last Name" name="lName" required><br> <br>
-          <input type="text" placeholder="Username" name="uname" required>
-          <input type="password" placeholder="Password" name="psw" required><br> <br>
-          <input style="width:49%;" type="email" placeholder="Email Address" name="email" required><br> <br>
-
-          <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Create Account</b></button> <br> <br>
-        </div>
-      </form>    
-    </div>
+    
 
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
