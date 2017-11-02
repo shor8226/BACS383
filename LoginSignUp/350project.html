@@ -13,6 +13,11 @@
   </head>
 
   <body>
+
+    <div id="siteHead">
+      <h2>Shopper.</h2>
+    </div>
+
    <!-- Button to open the modal login form -->
     <button onclick="document.getElementById('loginMod').style.display='block'">Login</button>
 
@@ -33,7 +38,7 @@
           <input type="text" placeholder="Enter Username" name="uname" required><br> <br>
           <input type="password" placeholder="Enter Password" name="psw" required><br> <br>
 
-          <button type="submit" class="btn" id="lgnBtn"><b>Login</b></button> <br> <br>
+          <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Login</b></button> <br> <br>
         </div>
       </form>    
     </div>
@@ -48,16 +53,18 @@
         <span onclick="document.getElementById('signupMod').style.display='none'" 
         class="close" title="Close Modal">&times;</span>
 
-        <div class="imgcontainer">
-          <img src="images/login.png" alt="Login Image" class="loginImg">
+        <div class="signUpHead">
+          <h2>Sign up.</h2> <p>Gain access to our extensive product library</p>
         </div>
 
-        <div class="container">
-          <input id=""type="email" placeholder="Enter Email Address" name="email" required>
-          <input type="text" placeholder="Enter Username" name="uname" required><br> <br>
-          <input type="password" placeholder="Enter Password" name="psw" required><br> <br>
+        <div style="margin-top: 2em; margin-bottom: 2em;" class="container">
+          <input type="text" placeholder="First Name" name="fName" required>
+          <input type="text" placeholder="Last Name" name="lName" required><br> <br>
+          <input type="text" placeholder="Username" name="uname" required>
+          <input type="password" placeholder="Password" name="psw" required><br> <br>
+          <input style="width:49%;" type="email" placeholder="Email Address" name="email" required><br> <br>
 
-          <button type="submit" class="btn" id="lgnBtn"><b>Create Account</b></button> <br> <br>
+          <button type="submit" class="btn" id="lgnBtn"><b style="color: white;">Create Account</b></button> <br> <br>
         </div>
       </form>    
     </div>

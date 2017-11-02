@@ -1,3 +1,15 @@
+#siteHead{
+	background-color:#6666ff; 
+	border-bottom: 2px solid black;
+}
+#siteHead h2{
+	margin-left: 1em;
+	color:white;
+	font-weight: bold;
+	margin-bottom: .5em;
+	padding-top: .5em;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -42,9 +54,33 @@
 }
 
 #lgnBtn{
-	background-color:gray;
+	background-color:#6666ff;
 }
 
+input{
+	border:2px solid black;
+	border-radius: 6px;
+}
+
+.signUpHead{
+	background-color: #6666ff;
+	border-bottom: 2px solid black;
+	margin-bottom: 2em;
+}
+
+.signUpHead h2{
+	margin-left: 1em;
+	font-weight: bold;
+	color:white;
+	margin-top: .5em;
+}
+.signUpHead p{
+	margin-left: 3em;
+	font-weight: bold;
+	color:white;
+	margin-bottom: 2em;
+	font-size: 70%;
+}
 
 /* Close button on hover */
 .close:hover,
