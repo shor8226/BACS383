@@ -17,6 +17,7 @@ tr:nth-child(even) {
    position:absolute;
    top:0;
    right:0;
+   padding: 1em;
   }
  fheader{
 		background-color:#c3dfef;
@@ -67,6 +68,12 @@ tr:nth-child(even) {
 
     .next {
     text-align: center;
+	padding: 2em;
 }
+
+	.header-1 {
+	text-align: center;
+
+	}
 
 
