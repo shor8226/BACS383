@@ -90,9 +90,7 @@ Released   : 20140322
 			<ul>
 				<li><a href="index.html" accesskey="1" title="">Homepage</a></li>
 				<li><a href="register.html" accesskey="2" title="">Register</a></li>
-				<li><a href="login.html" accesskey="3" title="">Login</a></li>
                 <li class="active"><a href="register2.html" accesskey="4" title="">Register2</a></li>
-				<li><a href="login2.html" accesskey="5" title="">Login2</a></li>
 			</ul>
 		</div>
 	</div>
@@ -107,7 +105,7 @@ Released   : 20140322
         <input type="text" aria-required="true" placeholder="Enter Email Address" id= "email" name="uname" required>
     
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" id ="password" name="psw" required>
+        <input type="password" placeholder="Enter Password" id ="password" name="psw" required pattern=".{15,}" required title="15 characters minimum">
 
 		<label><b>Re-enter Password</b></label>
         <input type="password" placeholder="Re-enter Password" id="password" name="psw" required oninput="check(this)">

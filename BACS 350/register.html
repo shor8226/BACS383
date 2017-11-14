@@ -90,15 +90,13 @@ Released   : 20140322
 			<ul>
 				<li><a href="index.html" accesskey="1" title="">Homepage</a></li>
 				<li class="active"><a href="register.html" accesskey="2" title="">Register</a></li>
-				<li><a href="login.html" accesskey="3" title="">Login</a></li>
                 <li><a href="register2.html" accesskey="4" title="">Register2</a></li>
-				<li><a href="login2.html" accesskey="5" title="">Login2</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
 <div class="wrapper">
-	<form action="sample.html">
+	<form action="/action_page.php">
       <div class="container">
         <label><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
@@ -107,14 +105,16 @@ Released   : 20140322
         <input type="text" placeholder="Enter Email Address" name="uname" required>
     
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" id ="password" name="psw" required>
-
+        <form>
+        <input type="password" placeholder="Enter Password" id ="password" name="pw" required name="pw" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+        </form>
 		<label><b>Re-enter Password</b></label>
         <input type="password" placeholder="Re-enter Password" id="password" name="psw" required oninput="check(this)">
 		<script language='javascript' type='text/javascript'>
     		function check(input) {
         		if (input.value != document.getElementById('password').value) {
-            		input.setCustomValidity('Password Must be Matching.');
+            		input.setCustomValidity('Passwords Must be Matching.');
        			} else {
            		 	// input is valid -- reset the error message
             		input.setCustomValidity('');
@@ -126,7 +126,7 @@ Released   : 20140322
       </div>
     
       <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="reset" value="Reset" class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
