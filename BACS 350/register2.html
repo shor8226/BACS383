@@ -19,6 +19,22 @@ Released   : 20140322
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+function validateForm(){
+	var formElement = document.Form1.elements;
+	
+	// Note i compare the i if less than the form element minus 1 coz i less the submit button below
+	for(i = 0; i < formElement.length -1; i++){
+		if(formElement[i].value == ""){
+			alert("You forgot one of the specified fields, your passwords dont match, or your password is not 15 characters.");
+			formElement[i].focus();
+			return false;
+		}
+	}
+	
+	return true;
+}
+</script>
 </head>
 <style>
     form {
@@ -91,30 +107,37 @@ Released   : 20140322
 				<li><a href="index.html" accesskey="1" title="">Homepage</a></li>
 				<li><a href="register.html" accesskey="2" title="">Register</a></li>
                 <li class="active"><a href="register2.html" accesskey="4" title="">Register2</a></li>
+                <li><a href="register4.html" accesskey="5" title="">Register4</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
 <div class="wrapper">
-	<form action="sample.html" method="post" id="submit_form">
+	<form name="Form1" class= "form-errors" action="" method="post" method ="Get" onsubmit="return validateForm()" id="submit_form">
       <div class="container">
         <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" id ="username" name="uname" required>
+        <input type="text" placeholder="Enter Username" id ="username" name="uname">
 
 		<label><b>Email</b></label>
-        <input type="text" aria-required="true" placeholder="Enter Email Address" id= "email" name="uname" required>
+        <input type="text" aria-required="true" placeholder="Enter Email Address" id= "email" name="uname">
     
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" id ="password" name="psw" required pattern=".{15,}" required title="15 characters minimum">
+        <input type="password" placeholder="Enter Password" id ="password" name="psw" required oninput="check(this)">
 
 		<label><b>Re-enter Password</b></label>
-        <input type="password" placeholder="Re-enter Password" id="password" name="psw" required oninput="check(this)">
-        
-		<button type="submit">Register</button>
-     
-
+        <input type="password" placeholder="Re-enter Password" id="password" name="psw">
+        <script language='javascript' type='text/javascript'>
+    		function check(input) {
+        		if (input.value != document.getElementById('password').value) {
+            		input.setCustomValidity('Passwords Must be Matching.');
+       			} else {
+           		 	// input is valid -- reset the error message
+            		input.setCustomValidity('');
+       		 	}
+    		}
+		</script>
+        <button type="submit">Register</button>
       </div>
-    
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
